@@ -78,7 +78,7 @@
     .back {
       transform: scale(-1, 1);
       display: flex;
-      max-width: 450px;
+      height:50%;
       position: absolute;
     }
 
