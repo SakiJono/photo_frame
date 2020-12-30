@@ -64,7 +64,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 700px;
+      height: 480px;
     }
 
     .frame_img {
@@ -75,9 +75,9 @@
     .back {
       transform: scale(-1, 1);
       display: flex;
-      width: 95vh;
+      width: 90vh;
+      max-height: 500px;
       position: absolute;
-      top: 10px;
     }
 
     .canvas {

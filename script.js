@@ -2,17 +2,22 @@ window.onload = function Init() {
   startVideo();
 }
 
+const video = document.getElementById('video');
+const make = document.getElementById('make');
+
 function startVideo() {
   navigator.mediaDevices.getUserMedia({ video: true, audio: false })
     .then(function (stream) {
       document.getElementById('video').srcObject = stream;
       // localVideo.muted = true;
       // localVideo.srcObject = localStream;
-      // localVideo.playsInline = true;
+      document.getElementById('video').playsInline = true;
+      // await video.play().catch(console.error);
     }).catch(function (error) { // 失敗時の処理はこちら.
       console.error('mediaDevice.getUserMedia() error:', error);
       return;
     });
+
 }
 
 function getMyVideo() {
@@ -24,8 +29,7 @@ function getMyVideo() {
   }
 }
 
-const video = document.getElementById('video');
-const make = document.getElementById('make');
+
 make.onclick = function draw() {
   const canvas = document.getElementById('canvas').getContext('2d');
   const img = new Image();
